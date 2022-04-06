@@ -50,4 +50,4 @@ And Done! You can see working in your machine in the address: 0.0.0.0:3000/repor
 - __Maria Clara__ - Code and Documentation - [[LinkedIn](https://www.linkedin.com/in/mariaclarab/)]
 
 # License :page_facing_up:
-This project is under license [[MIT](https://github.com/maclararose/API-Space/blob/main/LICENSE)] :round_pushpin:.
+This project is under license [[MIT](https://github.com/maclararose/Report-Job/blob/master/LICENSE)] :round_pushpin:.
