@@ -1,0 +1,194 @@
+Started GET "/" for ::1 at 2022-04-05 20:21:17 -0300
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mariab/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mariab/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.4ms | Allocations: 439)
+Completed 200 OK in 53ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 3532)
+
+
+Started GET "/sidekiq" for ::1 at 2022-04-05 20:21:23 -0300
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/stylesheets/application-dark.css" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/images/status.png" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/images/favicon.ico" for ::1 at 2022-04-05 20:21:24 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:21:29 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:21:34 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:21:39 -0300
+Started GET "/sidekiq/busy" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/stylesheets/application-dark.css" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/images/status.png" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/sidekiq/images/favicon.ico" for ::1 at 2022-04-05 20:21:41 -0300
+Started GET "/reports" for ::1 at 2022-04-05 20:40:35 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 534)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/mariab/Documents/Dev/ruby/report_job/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 3103ms
+Built at: 04/05/2022 8:40:46 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 11009.0ms | Allocations: 18331)
+Completed 200 OK in 11038ms (Views: 11030.5ms | ActiveRecord: 0.0ms | Allocations: 20875)
+
+
+Started POST "/reports" for ::1 at 2022-04-05 20:40:49 -0300
+Processing by ReportsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Gerar Novo"}
+[ActiveJob] Enqueued ReportExampleJob (Job ID: 11910039-7ee3-4364-9122-387d89588edf) to Sidekiq(reports)
+Redirected to http://localhost:3000/reports
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1415)
+
+
+Started GET "/reports" for ::1 at 2022-04-05 20:40:49 -0300
+Processing by ReportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reports/index.html.erb within layouts/application
+  Rendered reports/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3645)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4038)
+
+
+[ActiveJob] [ReportExampleJob] [11910039-7ee3-4364-9122-387d89588edf] Performing ReportExampleJob (Job ID: 11910039-7ee3-4364-9122-387d89588edf) from Sidekiq(reports) enqueued at 2022-04-05T23:40:49Z
+[ActiveJob] [ReportExampleJob] [11910039-7ee3-4364-9122-387d89588edf] Performed ReportExampleJob (Job ID: 11910039-7ee3-4364-9122-387d89588edf) from Sidekiq(reports) in 6224.42ms
+Started GET "/sidekiq" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/stylesheets/application-dark.css" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/images/status.png" for ::1 at 2022-04-05 20:41:15 -0300
+Started GET "/sidekiq/images/favicon.ico" for ::1 at 2022-04-05 20:41:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:41:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:42:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:43:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:44:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:45:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:46:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:47:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:41 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:46 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:51 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:48:56 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:01 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:06 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:11 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:16 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:21 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:26 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:31 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:49:36 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:50:37 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:51:38 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:52:38 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:53:38 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:54:24 -0300
+Started GET "/sidekiq/stats" for ::1 at 2022-04-05 20:54:26 -0300
+Started GET "/" for ::1 at 2022-04-05 20:54:28 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mariab/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mariab/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 34.9ms | Allocations: 227)
+Completed 200 OK in 119ms (Views: 36.2ms | Allocations: 950)
+
+
